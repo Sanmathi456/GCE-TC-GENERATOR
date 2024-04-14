@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 20px;
+        background: linear-gradient(to right, #007bff, #343a40);
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .content-box {
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 40px;
+        margin-bottom: 20px;
+      }
+      .btn-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-container a.btn {
+        width: 48%;
+      }
+      .headcol {
+        color: #007bff;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      .backbtn {
+        color: white;
+      }
+      .backbtn :hover{
+        color: white;
+        border: none;
+     }
+     .btn a {
+    text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-box">
+        <h3 class="text-center mb-4 headcol">ACADEMIC INFORMATION</h3>
+        <form action="/academicinfo_sign_up" method="POST">
+          <div class="form-group">
+            <label for="academicYear">Academic Year of Joining</label>
+            <input
+              type="text"
+              class="form-control"
+              id="academicYear"
+              name="academicYear"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="courseType">Course Type</label>
+            <select
+              class="form-control"
+              id="courseType"
+              name="courseType"
+              required
+            >
+              <option value="regular">Regular</option>
+              <option value="distance">Distance</option>
+              <option value="online">Online</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="course">Course</label>
+            <input
+              type="text"
+              class="form-control"
+              id="course"
+              name="course"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="branch">Branch</label>
+            <input
+              type="text"
+              class="form-control"
+              id="branch"
+              name="branch"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="admissionDate">Date of Admission</label>
+            <input
+              type="date"
+              class="form-control"
+              id="admissionDate"
+              name="admissionDate"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="admissionNumber">Counseling/Admission No</label>
+            <input
+              type="text"
+              class="form-control"
+              id="admissionNumber"
+              name="admissionNumber"
+              required
+            />
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn btn-primary">
+              <a href="familyinfo.html" class="backbtn">Back</a>
+            </button>
+            <button type="submit" class="btn btn-primary" id="nextButton">
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

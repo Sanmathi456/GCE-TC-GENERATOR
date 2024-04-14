@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Certificate</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .certificate {
+            padding: 20px;
+        }
+        .title-container {
+            text-align: left;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .title {
+
+            
+            flex: 1;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .head {
+            font-size: 25px;
+        }
+        .headtc {
+            text-decoration: underline;
+            font-size: 25px;
+        }
+        .certificate {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            width: 90%;
+            background-color: #fff;
+        }
+        .tc-number {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 120px;
+        }
+       
+        @media screen {
+            .form-group label {
+                flex: 1;
+                margin-right: 5px; 
+            }
+            .form-group input[type="text"] {
+                flex: 1;
+                padding: 5px;
+                border: none; 
+            }
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+            .form-group {
+                display: flex;
+            }
+            .form-group input[type="text"] {
+                border: none; 
+                padding: 0; 
+            }
+        }
+        .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 1;
+}
+
+.form-group input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: none;
+}
+.form-group label {
+        margin-right: 60px; 
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+    }
+/* Hide the input box when printing */
+@media print {
+        #registernumber {
+            border: none;
+            background-color: transparent;
+            align-items: center;
+            margin-bottom: 13px;
+            /* margin-right: 100px;
+            margin-left: 30px; */
+        }
+    }
+    @media print {
+        #incrementButton {
+            border: none;
+            background-color: transparent;
+            align-items: center;
+            margin-bottom: 13px;
+        }
+    }
+  
+  label, select, strong {
+    display: inline;
+  }
+  @media print {
+    select {
+      border: none;
+      background: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+  .button-container {
+            position: relative;
+            top: -10px; 
+            margin-bottom: 40px;
+        }
+        .backbtn {
+        color: white;
+      }
+      .backbtn :hover{
+        color: white;
+        border: none;
+     }
+     .btn a {
+    text-decoration: none;
+}
+@media print {
+    .print-hide,
+    .print-hide * {
+        display: none; 
+    }
+}
+
+@media print {
+    .print-hide {
+        display: none;
+    }
+}
+#medium{
+    margin-right: 383px;
+}
+#clgname{
+    margin-left: 200px;
+}
+
+.form-group.col-md-12 {
+    display: flex;
+    align-items: center;
+}
+.option{
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+label {
+    margin-right: 10px;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .certificate {
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+    }
+    .form-group label {
+        margin-right: 5px;
+        font-size: 18px; /* Reduce font size for printing */
+    }
+    .form-group input[type="text"], 
+    .form-group select {
+        padding: 8px;
+        font-size: 18px; /* Reduce font size for printing */
+    }
+    .form-group.col-md-12 {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="certificate">
+    <div class="title-container">
+        <img src="./logo.jpg" alt="College Logo" class="logo" />
+        <div class="title">
+            <h2 class="head">ANNEXURE-5</h2>
+            <h2 class="head">DEPARTMENT OF TECHNICAL EDUCATION-TAMILNADU.</h2>
+            <h2 class="headtc">TRANSFER CERTIFICATE</h2>
+        </div>
+    </div>
+    <div class="tc-number form-row">
+        <label for="tc_no">TC NO:<strong>BE/</strong>
+            <button id="incrementButton">1</button>
+          <label for="academic_year">/Academic Year:</label>
+          <select id="academic_year" name="academic_year">
+            
+            <option value="2023-2024">2027-2028</option>
+            <option value="2023-2024">2025-2026</option>
+            <option value="2023-2024">2024-2025</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2023-2024">2022-2023</option>
+            <option value="2023-2024">2021-2022</option>
+          </select></label>
+        
+        
+        <label for="college_name"><strong> Reg.No:</strong> <input type="text" id="registernumber" name="registernumber"></label>
+    </div>
+    <form>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="college_name" ><strong>1 Name of the College</strong><span>:</span></label>
+                <!-- <input type="text" id="college_name" name="college_name"> -->
+                <select id="clgname" name="clgname">
+                    <option value="clgname">GOVERNMENT COLLEGE OF ENGINEERING, SALEM-636011</option></select>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="pupil_name"><strong>2 Name of the Pupil</strong><span>:</span></label>
+                <input type="text" id="pupil_name" name="pupil_name">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="parent_name"><strong>3 Name of the Father or Mother</strong><span>:</span></label>
+                <input type="text" id="parent_name" name="parent_name">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="nationality"><strong>4 Nationality, Religion and Community</strong><span>:</span></label>
+                <input type="text" id="nationality" name="nationality">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="dob"><strong>5 Date of Birth as entered in the admission register in <br>figures and words</strong><span>:</span></label>
+                <input type="text" id="dob" name="dob">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="course" style="margin-right: 10px;"><strong>6 Course in which the Pupil was studying:at the time of leaving (in words)</strong><span>:</span></label>
+                <select id="coursename" name="coursename">
+                    <option value="coursename" class="option">B.E.,COMPUTER SCIENCE AND ENGINEERING (EIGHTH SEMESTER)</option>
+                    <option value="coursename" class="option">B.E.,ELECTRONICS AND COMMUNICATION ENGINEERING (EIGHTH SEMESTER) </option>
+                    <option value="coursename" class="option">B.E.,MECHANICAL ENGINEERING (EIGHTH SEMESTER)</option>
+                    <option value="coursename" class="option">B.E,CIVIL ENGINEERING (EIGHTH SEMESTER)</option>
+                    <option value="coursename" class="option">B.E.,ELECTRICAL AND ELECTRONICS ENGINEERING (EIGHTH SEMESTER)</option>
+                    <option value="coursename" class="option">METALLURGY (EIGHTH SEMESTER)</option>
+                </select>
+            </div>
+            
+            
+            <div class="form-group col-md-12">
+                <label for="admission_date"><strong>7 Date of Admission (The year to be entered in words)</strong><span>:</span></label>
+                <input type="text" id="admission_date" name="admission_date">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="promotion"><strong>8 Whether qualified for promotion</strong><span>:</span></label>
+                <input type="text" id="promotion" name="promotion">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="fees"><strong>9 a) Whether the Pupil paid all the fees: YES due to the College?
+                    </strong><span>:</span></label>
+                <input type="text" id="fees" name="fees">
+                
+            </div>
+            <div class="form-group col-md-12">
+                <label for="fees"><strong>
+
+                    b) Whether the Pupil was in receipt of any scholarship or any educational concessions
+                    </strong><span>:</span></label>
+                <input type="text" id="fees" name="fees">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="scholarship"><strong>10 Whether the Pupil was in receipt of any scholarship or any educational concessions</strong><span>:</span></label>
+                <input type="text" id="scholarship" name="scholarship">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="medical_inspection"><strong>11 Whether the Pupil has undergone medical inspection if any, during the academic year First or Repeat to be specified</strong><span>:</span></label>
+                <input type="text" id="medical_inspection" name="medical_inspection">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="left_date"><strong>12 Date on which the Pupil actually left the College</strong><span>:</span></label>
+                <input type="text" id="left_date" name="left_date">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="medium"><strong>13 Medium of Instruction</strong><span>:</span></label>
+                <!-- <input type="text" id="medium" name="medium"> -->
+                <select id="medium" name="medium">
+                    <option value="medium">ENGLISH</option></select>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="application_date"><strong>14 Date on which the application for Transfer Certificate was made</strong><span>:</span></label>
+                <input type="text" id="application_date" name="application_date">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="tc_date"><strong>15 Date of Transfer Certificate</strong><span>:</span></label>
+                <input type="text" id="tc_date" name="tc_date">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="signature"><strong>16 Signature of the Vice Principal with College Seal</strong><span>:</span></label>
+                <input type="text" id="signature" name="signature">
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <div class="row button-container">
+        <div class="col-md-6 text-left print-hide">
+            <button type="submit" class="btn btn-primary">
+                <a href="temp.html" class="backbtn">Back</a>
+              </button>
+            <button onclick="sendEmail()" class="btnemail btn btn-primary">Send Mail to Students</button>
+           
+        </div>
+        <div class="col-md-6 text-right print-hide">
+            <button onclick="printTC()" class="btn btn-primary print-button">Print Transfer Certificate</button>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS and jQuery (optional, for Bootstrap functionality) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script>
+    var button = document.getElementById('incrementButton');
+    
+    // Add click event listener
+    button.addEventListener('click', function() {
+        // Get the current value of the button
+        var currentValue = parseInt(button.textContent);
+        
+        // Increment the value by 1
+        var newValue = currentValue + 1;
+        
+        // Update the button text with the new value
+        button.textContent = newValue;
+    });
+    function printTC() {
+        window.print();
+    }
+    function sendEmail() {
+        // Modify the following lines with your email sending logic
+        var recipientEmail = "recipient@example.com";
+        var subject = " Your Transfer Certificate (TC) is Ready for Pickup";
+        var body = "Dear Student I hope this email finds you well. We are pleased to inform you that your Transfer Certificate (TC) is now ready for pickup from the GCE's administrative office. Please make sure to bring a valid ID for verification purposes when collecting your TC. If you have any questions or need further assistance, feel free to contact us. Best Regards Contact Us +91 6369306199"
+
+        var mailtoLink = "mailto:" + encodeURIComponent(recipientEmail) +
+                         "?subject=" + encodeURIComponent(subject) +
+                         "&body=" + encodeURIComponent(body);
+
+        window.location.href = mailtoLink;
+    }
+</script>
+</body>
+</html>

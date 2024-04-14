@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer Certificate Generator</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        background: linear-gradient(to right, #007bff, #343a40);
+    }
+    .container {
+      text-align: center;
+      margin-top: 100px;
+      background: linear-gradient(to right, #007bff, #343a40);
+      padding: 50px;
+      border-radius: 20px;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+   .para{
+    font-size: 18px;
+    color: white;
+    margin-right: 370px;
+   }
+
+   .backbtn {
+        color: white;
+      }
+
+      .backbtn :hover{
+        color: white;
+        border: none;
+     }
+
+     .btn a {
+    text-decoration: none;
+     }
+
+  </style>
+</head>
+<body>
+  <div class="container col-md-6">
+    <h2 class="text-white mb-4">Transfer Certificate Generator</h2>
+    <p class="para">Enter Register No</p>
+    <input type="text" id="registerNoInput" class="form-control text-primary" placeholder="Register No">
+    <div class="row button-container">
+      <div class="col-md-6 text-left">
+          <button type="submit" class="btn btn-primary">
+              <a href="cgpa-calculation.html" class="backbtn">Back</a>
+            </button>
+         </div>
+    <button class="btn btn-primary" id="generateTcBtn">Generate TC</button>
+  </div>
+
+  <script>
+    document.getElementById("generateTcBtn").addEventListener("click", function() {
+      // Get the register number entered by the user
+      var registerNo = document.getElementById("registerNoInput").value;
+      
+      // Redirect to template.html with the register number as a parameter
+      window.location.href = "template.html?registerNo=" + registerNo;
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(to right, #007bff, #343a40);
+      }
+
+      .head {
+        margin-bottom: 20px;
+        /* background: linear-gradient(to right,#007bff,#343a40); */
+        width: 100%;
+      }
+      .subhead {
+        margin-bottom: 20px;
+        color: #007bff;
+        font-size: 20px;
+      }
+      .container {
+        padding: 20px;
+        border: 2px solid #007bff; /* Set border width and color */
+        background-color: white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .backbtn {
+        color: white;
+      }
+      .backbtn :hover{
+        color: white;
+        border: none;
+     }
+     .btn a {
+    text-decoration: none;
+}
+
+      
+    </style>
+  </head>
+  <body>
+    <section id="student-info">
+      <div class="container">
+        <h2 class="text-center head">STUDENT DETAILS</h2>
+        <h3 class="text-center subhead">General Information</h3>
+        <!-- <form class="form"> -->
+        <!-- <form action="/general_sign_up" method="POST"> -->
+        <form action="/general_sign_up" method="POST">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="studentName">Student Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="studentName"
+                name="studentName"
+                placeholder="Enter Student Name"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="registerNo">Register No</label>
+              <input
+                type="text"
+                class="form-control"
+                id="registerNo"
+                name="registerNo"
+                placeholder="Enter Register No"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="department">Department</label>
+              <input
+                type="text"
+                class="form-control"
+                id="department"
+                name="department"
+                placeholder="Enter Department"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter Email"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="phoneNo">Phone No</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phoneNo"
+                name="phoneNo"
+                placeholder="Enter Phone No"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" class="form-control">
+                <option selected>Choose...</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dob">Date Of Birth</label>
+              <input type="date" class="form-control" id="dob" name="dob" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="bloodGroup">Blood Group</label>
+              <input
+                type="text"
+                class="form-control"
+                id="bloodGroup"
+                name="bloodGroup"
+                placeholder="Enter Blood Group"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="caste">Caste</label>
+              <input
+                type="text"
+                class="form-control"
+                id="caste"
+                name="caste"
+                placeholder="Enter Caste"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="religion">Religion</label>
+              <input
+                type="text"
+                class="form-control"
+                id="religion"
+                name="religion"
+                placeholder="Enter Religion"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="community">Community</label>
+              <input
+                type="text"
+                class="form-control"
+                id="community"
+                name="community"
+                placeholder="Enter Community"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="nationality">Nationality</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nationality"
+                name="nationality"
+                placeholder="Enter Nationality"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstGraduate">First Graduate</label>
+              <select
+                id="firstGraduate"
+                name="firstGraduate"
+                class="form-control"
+                required
+              >
+                <option selected>Choose...</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="aadharNo">Aadhar No</label>
+              <input
+                type="text"
+                class="form-control"
+                id="aadharNo"
+                name="aadharNo"
+                placeholder="Enter Aadhar No"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6 text-left">
+              <button type="submit" class="btn btn-primary">
+                <a href="login.html" class="backbtn">Back</a>
+              </button>
+            </div>
+            <div class="form-group col-md-6 text-right">
+              <button type="submit" class="btn btn-primary" id="nextButton">
+                Next
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script>
+  // Add event listener to the "Next" button
+  document.getElementById("nextButton").addEventListener("click", function() {
+    // Navigate to the next page
+    window.location.href = "residential.html";
+  });
+</script> -->
+    <!-- <script>
+  document.getElementById("nextButton").addEventListener("click", function() {
+    // Validate form fields
+    if (document.getElementById("generalForm").checkValidity()) {
+      // Navigate to the next page if form is valid
+      window.location.href = "residential.html";
+    } else {
+      // Show required field message
+      alert("Please fill in all required fields.");
+    }
+  });
+</script> -->
+  </body>
+</html>

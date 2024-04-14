@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Details Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #007bff, #343a40);
+    }
+
+    .head {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .subhead {
+      margin-bottom: 20px;
+      color: #007bff;
+      font-size: 20px;
+    }
+
+    .container {
+      padding: 20px;
+      border: 2px solid #007bff;
+      background-color: white;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .backbtn {
+      color: white;
+    }
+
+    .backbtn:hover {
+      color: white;
+      border: none;
+    }
+
+    .btn a {
+      text-decoration: none;
+    }
+
+    .btn {
+      width: 200px;
+    }
+
+  </style>
+</head>
+<body>
+  <section id="student-info">
+    <div class="container">
+      <h2 class="text-center head">Contact Us</h2>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="studentName"> Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="studentName"
+              name="studentName"
+              placeholder="Enter Student Name"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="registerNo">phone No</label>
+            <input
+              type="text"
+              class="form-control"
+              id="registerNo"
+              name="registerNo"
+              placeholder="Enter Register No"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="department">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="department"
+              name="department"
+              placeholder="Enter Department"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Message</label>
+            <textarea
+              class="form-control"
+              id="messageInput"
+              name="message"
+              placeholder="Enter Message"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6 text-left">
+            <button type="submit" class="btn btn-primary">
+              <a href="template.html" class="backbtn">Back</a>
+            </button>
+          </div>
+          <div class="form-group col-md-6 text-right">
+            <!-- <button type="button" class="btn btn-primary" id="nextButton">
+              Send Message
+            </button> -->
+            <button onclick="sendEmail()" class="btnemail btn btn-primary">Send Mail</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  function sendEmail() {
+        // Modify the following lines with your email sending logic
+        var recipientEmail = "recipient@example.com";
+        var subject = " Your Transfer Certificate (TC) is Ready for Pickup";
+        var body = "Dear Student I hope this email finds you well. We are pleased to inform you that your Transfer Certificate (TC) is now ready for pickup from the GCE's administrative office. Please make sure to bring a valid ID for verification purposes when collecting your TC. If you have any questions or need further assistance, feel free to contact us. Best Regards Contact Us +91 6369306199"
+
+        var mailtoLink = "mailto:" + encodeURIComponent(recipientEmail) +
+                         "?subject=" + encodeURIComponent(subject) +
+                         "&body=" + encodeURIComponent(body);
+
+        window.location.href = mailtoLink;
+    }
+</script>
+ 
+
+   
+</body>
+</html>

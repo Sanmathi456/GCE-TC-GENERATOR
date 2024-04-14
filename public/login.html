@@ -1,0 +1,233 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right,#007bff,#343a40);
+        }
+
+        .signup-container {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-control:hover{
+            background-color: lightgray;
+            color: #fff;
+
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-signup {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-signup:hover {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .btn-google {
+            background-color: #ffffff;
+            color: #757575;
+            border: 1px solid #757575;
+        }
+
+        .btn-google:hover {
+            background-color: #eeeeee;
+            color: #757575;
+            border: 1px solid #757575;
+        }
+
+        .google-logo {
+            height: 20px;
+            margin-right: 10px;
+        }
+        p{
+             margin-top: 20px;
+            text-align: center;
+        }
+        .para{
+            color: #007bff;
+            font-weight: bold;
+        }
+        h2{
+            color: #007bff;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <h2>LOGIN</h2>
+        <form action="/login" method="POST"></form>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-block btn-signup" id="nextButton">login</button>
+              
+            <p>Don't have an account? <a href="sign up.html" class="para">Sign Up</a></p>
+            <hr>
+            <button type="button" class="btn btn-block btn-google"><img class="google-logo" src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo">Sign Up with Google</button>
+        </form>
+    </div>
+
+    Bootstrap JS
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script>
+        document.getElementById("nextButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            console.log("Button clicked!"); // Check if event listener is triggered
+            window.location.href = "General.html"; // Redirect to General.html
+        });
+    </script> -->
+<!-- </body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(to right, #007bff, #343a40);
+      }
+
+      .signup-container {
+        max-width: 400px;
+        margin: auto;
+        margin-top: 50px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .signup-container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .btn-signup {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+      }
+
+      .btn-signup:hover {
+        background-color: #343a40;
+        color: #fff;
+      }
+
+      .btn-google {
+        background-color: #ffffff;
+        color: #757575;
+        border: 1px solid #757575;
+      }
+
+      .btn-google:hover {
+        background-color: #eeeeee;
+        color: #757575;
+        border: 1px solid #757575;
+      }
+
+      .google-logo {
+        height: 20px;
+        margin-right: 10px;
+      }
+      p {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .para {
+        color: #007bff;
+        font-weight: bold;
+      }
+      h2 {
+        color: #007bff;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="signup-container">
+      <h2>LOGIN</h2>
+      <form action="/login" method="POST">
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            name="password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-block btn-signup" id="nextButton">
+          Login
+        </button>
+      </form>
+      <p>
+        Don't have an account? <a href="signup.html" class="para">Sign Up</a>
+      </p>
+      <hr />
+      <button type="button" class="btn btn-block btn-google">
+        <img
+          class="google-logo"
+          src="https://developers.google.com/identity/images/g-logo.png"
+          alt="Google Logo"
+        />Sign Up with Google
+      </button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

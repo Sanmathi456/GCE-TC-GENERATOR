@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculation</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 20px;
+        background: linear-gradient(to right, #007bff, #343a40);
+      }
+      .headcol {
+        color: #007bff;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .content-box {
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 40px;
+        margin-bottom: 20px;
+      }
+      .btn-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-container a.btn {
+        width: 48%;
+      }
+      .result-container {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: linear-gradient(to right, #007bff, #343a40);
+        color: white;
+      }
+      .res {
+        color: #007bff;
+      }
+      input:hover {
+        background-color: rgba(255, 255, 255, 0.913);
+        color: white;
+      }
+      .btn-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-container a.btn {
+        width: 22%;
+      }
+      /* Remove increase and decrease arrows */
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .backbtn {
+        color: white;
+      }
+      .backbtn :hover{
+        color: white;
+        border: none;
+      }
+      .btn a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-box">
+        <h3 class="text-center mb-4 headcol">CUMULATIVE GRADE POINT AVERAGE</h3>
+        <form id="cgpaForm" action="/cgpainfo_sign_up" method="POST">
+          <div class="form-group">
+            <label for="semester1">Semester 1:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester1"
+              name="semester1"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester2">Semester 2:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester2"
+              name="semester2"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester3">Semester 3:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester3"
+              name="semester3"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester4">Semester 4:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester4"
+              name="semester4"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester5">Semester 5:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester5"
+              name="semester5"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester6">Semester 6:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester6"
+              name="semester6"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester7">Semester 7:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester7"
+              name="semester7"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester8">Semester 8:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="semester8"
+              name="semester8"
+              required
+            />
+          </div>
+
+          <input type="hidden" id="overallCGPAInput" name="overallCGPA" />
+          <input type="hidden" id="marksPercentageInput" name="marksPercentage" />
+
+          <div class="btn-container">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="calculateCGPA()"
+            >
+              CALCULATE
+            </button>
+          </div>
+          <div class="btn-container">
+            <a href="academic-info.html" class="btn btn-primary">Back</a>
+            <button type="submit" class="btn btn-primary" id="nextButton">
+              Next
+            </button>
+          </div>
+        </form>
+        <div
+          class="result-container"
+          id="resultContainer"
+          style="display: none"
+        >
+          <h4 class="text-center mb-4 res">Result</h4>
+          <div id="cgpaResult">
+            <p>
+              Over All CGPA: <span id="overallCGPA" name="overallCGPA"></span>
+            </p>
+            <!-- Initialized to 0 -->
+            <p>
+              Marks in%:
+              <span id="marksPercentage" name="marksPercentage"></span>
+            </p>
+            <!-- Initialized to 0 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calculateCGPA() {
+        var semester1 = parseFloat(document.getElementById("semester1").value);
+        var semester2 = parseFloat(document.getElementById("semester2").value);
+        var semester3 = parseFloat(document.getElementById("semester3").value);
+        var semester4 = parseFloat(document.getElementById("semester4").value);
+        var semester5 = parseFloat(document.getElementById("semester5").value);
+        var semester6 = parseFloat(document.getElementById("semester6").value);
+        var semester7 = parseFloat(document.getElementById("semester7").value);
+        var semester8 = parseFloat(document.getElementById("semester8").value);
+
+        if (isNaN(semester1) || isNaN(semester2) || isNaN(semester3) || isNaN(semester4) || isNaN(semester5) || isNaN(semester6) || isNaN(semester7) || isNaN(semester8)) {
+          alert("Please enter valid numeric values for all semesters.");
+          return;
+        }
+
+        var totalCGPA =
+          (semester1 +
+            semester2 +
+            semester3 +
+            semester4 +
+            semester5 +
+            semester6 +
+            semester7 +
+            semester8) /
+          8;
+
+        var marksPercentage = (totalCGPA / 10) * 100;
+
+        document.getElementById("overallCGPAInput").value =
+          totalCGPA.toFixed(2);
+        document.getElementById("marksPercentageInput").value =
+          marksPercentage.toFixed(2) + "%";
+
+        document.getElementById("resultContainer").style.display = "block";
+        document.getElementById("overallCGPA").innerText = totalCGPA.toFixed(2);
+        document.getElementById("marksPercentage").innerText =
+          marksPercentage.toFixed(2) + "%";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Residence Details</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 20px;
+        background: linear-gradient(to right, #007bff, #343a40);
+      }
+      .content-box {
+        background-color: white;
+        border: 1px solid #040404;
+        border-radius: 0px;
+        padding: 40px;
+        margin-bottom: 20px;
+      }
+      .student-details-box {
+        text-align: center;
+        color: #292075;
+        padding: 5px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+      .residence-details {
+        color: #007bff;
+        text-align: center;
+      }
+      .flex-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .flex-start {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .residencecol {
+        color: #007bff;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      .backbtn {
+        color: white;
+      }
+      .backbtn :hover{
+        color: white;
+        border: none;
+     }
+     .btn a {
+    text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-box">
+        <div class="student-details-box residence-details">
+          <h3 class="text-center mb- residencecol">RESIDENCE INFORMATION</h3>
+        </div>
+        <!-- <form class="form" action="/sign_up" method="POST"> -->
+        <form class="form" action="/residential_sign_up" method="POST">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="doorNo">Door No</label>
+              <input
+                type="text"
+                class="form-control"
+                id="doorNo"
+                name="doorNo"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="streetName">Street Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="streetName"
+                name="streetName"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="villageName">Village Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="villageName"
+                name="villageName"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="city">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                name="city"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pinCode">Pin Code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pinCode"
+                name="pinCode"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="state">State</label>
+              <input
+                type="text"
+                class="form-control"
+                id="state"
+                name="state"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="country">Country</label>
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                name="country"
+                required
+              />
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">
+              <a href="General.html" class="backbtn">Back</a>
+            </button>
+            <button type="submit" class="btn btn-primary" id="nextButton">
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
